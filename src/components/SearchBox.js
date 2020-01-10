@@ -7,8 +7,14 @@ const SearchBoxContainer = styled.div`
 
 const Input = styled.input`
 	padding: 1rem;
-	border: 1px solid #19a974;
-	background-color: #cdecff;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	background-image: linear-gradient(
+		to right,
+		rgb(255, 140, 198),
+		rgb(255, 100, 100)
+	);
+	color: #fff;
 `
 
 const SearchBox = ({ searchfield, searchChange }) => {
@@ -16,7 +22,7 @@ const SearchBox = ({ searchfield, searchChange }) => {
 		<SearchBoxContainer>
 			<Input
 				type='search'
-				placeholder='search robots'
+				placeholder='Search Cute Monsters'
 				onChange={searchChange}
 			/>
 		</SearchBoxContainer>

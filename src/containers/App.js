@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import styled from 'styled-components';
 import './App.css';
+
+const Wrapper = styled.div`
+	text-align: center;
+`
+
+const Heading = styled.h1`
+  font-size: 3rem;
+`
 
 class App extends Component {
   constructor() {
@@ -31,13 +40,13 @@ class App extends Component {
     return !robots.length ?
       <h1>Loading</h1> :
       (
-        <div className='tc'>
-          <h1 className='f1'>RoboFriends</h1>
+        <Wrapper>
+          <Heading>RoboFriends</Heading>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
             <CardList robots={filteredRobots} />
           </Scroll>
-        </div>
+        </Wrapper>
       );
   }
 }

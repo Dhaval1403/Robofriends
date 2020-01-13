@@ -3,28 +3,23 @@ import styled from 'styled-components'
 
 const SearchBoxContainer = styled.div`
 	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `
 
 const Input = styled.input`
 	padding: 1rem;
 	border: 1px solid #fff;
+	outline: none;
 	border-radius: 8px;
-	background-image: linear-gradient(
-		to right,
-		rgb(255, 140, 198),
-		rgb(255, 100, 100)
-	);
-	color: #fff;
+	background-color: #fff;
 `
 
-const SearchBox = ({ searchfield, searchChange }) => {
+const SearchBox = ({ searchChange }) => {
 	return (
 		<SearchBoxContainer>
-			<Input
-				type='search'
-				placeholder='Search Cute Monsters'
-				onChange={searchChange}
-			/>
+			<Input type='search' placeholder='Search Kitty' onChange={searchChange} />
 		</SearchBoxContainer>
 	)
 }

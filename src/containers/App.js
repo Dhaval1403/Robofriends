@@ -4,12 +4,9 @@ import SearchBox from '../components/SearchBox'
 import styled from 'styled-components'
 import './App.css'
 
-const Wrapper = styled.div`
-	text-align: center;
-`
-
 const Heading = styled.h1`
 	font-size: 3rem;
+	text-align: center;
 `
 
 class App extends Component {
@@ -39,13 +36,13 @@ class App extends Component {
 			return robot.name.toLowerCase().includes(searchfield.toLowerCase())
 		})
 		return !robots.length ? (
-			<h1>Loading</h1>
+			<Heading>Loading</Heading>
 		) : (
-			<Wrapper>
-				<Heading>Cute Little Monsters</Heading>
+			<div>
+				<Heading>Cute &nbsp; Kitty</Heading>
 				<SearchBox searchChange={this.onSearchChange} />
 				<CardList robots={filteredRobots} />
-			</Wrapper>
+			</div>
 		)
 	}
 }
